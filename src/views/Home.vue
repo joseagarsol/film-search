@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Banco de pruebas de componentes</h1>
+    <p>Así se ve el movieCard:</p>
+    <div style="width: 300px; margin: 20px auto">
+      <MovieCard :movie="mockMovie" />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import MovieCard from "@/components/MovieCard.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    MovieCard,
+  },
+  data() {
+    return {
+      mockMovie: {
+        id: 615656,
+        title: "Meg 2: The Trench",
+        poster_path:
+          "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
+        vote_average: 6.9,
+        overview: "Una fosa oceánica... (etc)",
+      },
+    };
   },
 };
 </script>
