@@ -1,32 +1,46 @@
 <template>
   <div class="home">
-    <h1>Banco de pruebas de componentes</h1>
-    <p>Así se ve el movieCard:</p>
-    <div style="width: 300px; margin: 20px auto">
-      <MovieCard :movie="mockMovie" />
-    </div>
+    <h1 class="home-title">Películas populares</h1>
+    <div v-if="isLoading" class="loading-spinner">Cargando...</div>
+    <MovieList v-else :movies="popularMovies" />
   </div>
 </template>
 
 <script>
-import MovieCard from "@/components/MovieCard.vue";
+import MovieList from "@/components/MovieList.vue";
+import api from "@/services/api.js";
 
 export default {
   name: "HomeView",
   components: {
-    MovieCard,
+    MovieList,
   },
   data() {
     return {
-      mockMovie: {
-        id: 615656,
-        title: "Meg 2: The Trench",
-        poster_path:
-          "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
-        vote_average: 6.9,
-        overview: "Una fosa oceánica... (etc)",
-      },
+      popularMovies: [],
+      isLoading: false,
     };
+  },
+  async mounted() {
+    try {
+      const response = await api.getPopularMovies();
+      this.popularMovies = response.data.results;
+    } catch (error) {
+      console.error("Error fetching popular movies:", error);
+    } finally {
+      this.isLoading = false;
+    }
   },
 };
 </script>
+<style scoped>
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-title {
+  padding: 24px;
+  font-size: 2rem;
+}
+</style>
