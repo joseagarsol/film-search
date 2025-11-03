@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap");
+
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --font-display: "Montserrat", sans-serif;
+
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f0f0f0;
+  --color-accent: #f5c518;
+}
+
+body.dark-mode {
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b0b0b0;
+  --color-background-primary: #121212;
+  --color-background-secondary: #1e1e1e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-accent);
+}

@@ -17,7 +17,7 @@ apiClient.interceptors.request.use((config) => {
 });
 
 export default {
-  getPopuarMovies() {
+  getPopularMovies() {
     return apiClient.get("/movie/popular");
   },
 
