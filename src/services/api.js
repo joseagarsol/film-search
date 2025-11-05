@@ -22,7 +22,11 @@ export default {
   },
 
   getMovieDetails(movieId) {
-    return apiClient.get(`/movie/${movieId}`);
+    return apiClient.get(`/movie/${movieId}`, {
+      params: {
+        append_to_response: "credits,videos",
+      },
+    });
   },
 
   searchMovies(query, page = 1) {
