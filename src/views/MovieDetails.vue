@@ -204,4 +204,43 @@ export default {
   color: var(--color-text-secondary);
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .movie-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .movie-poster img {
+    width: 250px;
+    margin-bottom: 24px;
+  }
+
+  .movie-info {
+    padding: 0;
+    text-align: center;
+  }
+
+  .movie-info h1 {
+    font-size: 2.2rem;
+  }
+
+  .tagline {
+    margin-bottom: 16px;
+  }
+
+  .metadata {
+    justify-content: center;
+  }
+
+  .movie-backdrop {
+    height: 350px;
+  }
+
+  .movie-cast {
+    padding: 16px;
+    margin-top: 20px;
+  }
+}
 </style>
