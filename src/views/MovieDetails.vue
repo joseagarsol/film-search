@@ -29,7 +29,10 @@
           <h3>Sinopsis</h3>
           <p>{{ movie.overview }}</p>
 
-          <button class="favorite-btn">💘 Añadir a favoritos</button>
+          <button class="favorite-btn" @click="toggleFavorite">
+            <span v-if="isMovieFavorite"> ♥️ Quitar de favoritos</span>
+            <span v-else> 🤍 Añadir a favoritos </span>
+          </button>
         </div>
       </div>
 
@@ -51,6 +54,7 @@
 </template>
 <script>
 import api from "@/services/api.js";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "MovieDetails",
@@ -82,6 +86,22 @@ export default {
         return this.movie.credits.cast.slice(0, 10);
       }
       return [];
+    },
+    ...mapGetters("favorites", ["isFavorite"]),
+    isMovieFavorite() {
+      return this.movie ? this.isFavorite(this.movie.id) : false;
+    },
+  },
+  methods: {
+    ...mapActions("favorites", ["addFavorite", "removeFavorite"]),
+
+    toggleFavorite() {
+      if (!this.movie) return;
+      if (this.isMovieFavorite) {
+        this.removeFavorite(this.movie.id);
+      } else {
+        this.addFavorite(this.movie);
+      }
     },
   },
   async mounted() {
