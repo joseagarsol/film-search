@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="{ name: 'MovieDetails', params: { id: movie.id } }"
+    :to="{ name: 'movieDetails', params: { id: movie.id } }"
     class="movie-card-link"
   >
     <div class="movie-card">
