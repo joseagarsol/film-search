@@ -14,13 +14,13 @@ const routes = [
   },
   {
     path: "/movie/:id",
-    name: "MovieDetails",
+    name: "movieDetails",
     component: MovieDetails,
     props: true,
   },
   {
     path: "/favorites",
-    name: "Favorites",
+    name: "favorites",
     component: Favorites,
   },
 ];
