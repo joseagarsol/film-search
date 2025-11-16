@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "@/views/Home.vue";
 import MovieDetails from "@/views/MovieDetails.vue";
 import Favorites from "@/views/Favorites.vue";
+import SearchResults from "@/views/SearchResults.vue";
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,11 @@ const routes = [
     path: "/favorites",
     name: "favorites",
     component: Favorites,
+  },
+  {
+    path: "/search",
+    name: "searchResult",
+    component: SearchResults,
   },
 ];
 
