@@ -1,16 +1,24 @@
 <template>
   <nav class="navbar">
     <ul class="navbar-list">
-      <li class="navbar-item"><router-link to="/">Home</router-link></li>
-      <li class="navbar-item">
-        <router-link to="/favorites">Favorites</router-link>
+      <li class="navbar-link">
+        <span class="navbar-item"><router-link to="/">Home</router-link></span>
+        <span class="navbar-item">
+          <router-link to="/favorites">Favorites</router-link>
+        </span>
       </li>
+      <li class="navbar-item"><SearchBar /></li>
     </ul>
   </nav>
 </template>
 <script>
+import SearchBar from "./SearchBar.vue";
+
 export default {
   name: "NavBar",
+  components: {
+    SearchBar,
+  },
 };
 </script>
 <style scoped>
@@ -24,10 +32,16 @@ export default {
 .navbar-list {
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-link {
+  display: flex;
   gap: 20px;
 }
 
-.navbar a {
+.navbar-link a {
   color: #000000;
   font-weight: bold;
   text-decoration: none;
