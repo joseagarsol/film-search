@@ -4,6 +4,7 @@ import Home from "@/views/Home.vue";
 import MovieDetails from "@/views/MovieDetails.vue";
 import Favorites from "@/views/Favorites.vue";
 import SearchResults from "@/views/SearchResults.vue";
+import NotFound from "@/views/NotFound.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes = [
     path: "/search",
     name: "searchResult",
     component: SearchResults,
+  },
+  {
+    path: "*",
+    name: "notFound",
+    component: NotFound,
   },
 ];
 
