@@ -111,6 +111,9 @@ export default {
       this.movie = response.data;
     } catch (error) {
       console.error("Error fetching movie details:", error);
+      if (error.response && error.response.status === 404) {
+        this.$router.replace({ name: "notFound" });
+      }
     } finally {
       this.isLoading = false;
     }
