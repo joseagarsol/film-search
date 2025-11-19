@@ -7,17 +7,22 @@
           <router-link to="/favorites">Favorites</router-link>
         </span>
       </li>
-      <li class="navbar-item"><SearchBar /></li>
+      <li class="navbar-item">
+        <SearchBar />
+        <SwitchDarkMode />
+      </li>
     </ul>
   </nav>
 </template>
 <script>
 import SearchBar from "./SearchBar.vue";
+import SwitchDarkMode from "@/components/SwitchDarkMode.vue";
 
 export default {
   name: "NavBar",
   components: {
     SearchBar,
+    SwitchDarkMode,
   },
 };
 </script>
@@ -49,5 +54,11 @@ export default {
 
 .navbar a.router-link-exact-active {
   text-decoration: underline;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 </style>
