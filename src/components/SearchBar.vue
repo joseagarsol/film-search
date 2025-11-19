@@ -51,6 +51,8 @@ export default {
           name: "searchResult",
           query: { q: this.searchQuery },
         });
+        this.searchQuery = "";
+        this.isInputVisible = false;
       }
     },
     openInput() {
