@@ -43,4 +43,8 @@ export default {
   padding: 24px;
   font-size: 2rem;
 }
+
+.loading-spinner {
+  padding: 5px 24px;
+}
 </style>
