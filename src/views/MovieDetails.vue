@@ -127,6 +127,10 @@ export default {
 };
 </script>
 <style scoped>
+.loading-spinner {
+  padding: 20px 24px;
+}
+
 .movie-container {
   max-width: 1200px;
   margin: 0 auto;
