@@ -5,9 +5,10 @@
   >
     <div class="movie-card">
       <img
-        :src="movie.poster_path | posterUrl('w342')"
+        :src="posterImage"
         :alt="movie.title + ' poster'"
         class="movie-card-poster"
+        @error="handleImageError"
       />
       <div class="movie-card-content">
         <h3 class="movie-card-title">{{ movie.title }}</h3>
@@ -25,6 +26,24 @@ export default {
     movie: {
       type: Object,
       required: true,
+    },
+  },
+  data() {
+    return {
+      imgSrc: null,
+    };
+  },
+  computed: {
+    posterImage() {
+      if (this.movie.poster_path) {
+        return this.$options.filters.posterUrl(this.movie.poster_path, "w342");
+      }
+      return require("@/assets/images/placeholder.svg");
+    },
+  },
+  methods: {
+    handleImageError(event) {
+      event.target.src = require("@/assets/images/placeholder.svg");
     },
   },
 };
