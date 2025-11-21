@@ -32,7 +32,6 @@ export default {
 .favorites-title {
   padding: 24px;
   font-size: 2rem;
-  text-align: center;
 }
 .no-favorites {
   text-align: center;
