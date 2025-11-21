@@ -77,7 +77,7 @@ export default {
 <style scoped>
 .search-bar {
   display: flex;
-  width: 300px;
+  width: 17vh;
   align-items: center;
   justify-content: flex-end;
   background: linear-gradient(to left, white, white) no-repeat right / 0% 100%;
