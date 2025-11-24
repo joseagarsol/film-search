@@ -4,7 +4,7 @@
 ![Vue.js](https://img.shields.io/badge/Vue.js-2.x-4FC08D?style=for-the-badge&logo=vue.js)
 ![Vuex](https://img.shields.io/badge/Vuex-3.x-4FC08D?style=for-the-badge&logo=vue.js)
 ![Vue Router](https://img.shields.io/badge/Vue_Router-3.x-4FC08D?style=for-the-badge&logo=vue.js)
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 > Una aplicación web para buscar información sobre películas, ver detalles y guardar tus favoritas.
 
@@ -14,9 +14,9 @@ Este proyecto fue creado con el objetivo de demostrar habilidades en el desarrol
 
 ### ✨ Demo en Vivo
 
-*¡Próximamente! Este proyecto será desplegado pronto.*
+Puedes ver el proyecto funcionando en producción aquí:
 
-**(Nota para ti, Jose: Cuando lo despliegues en Netlify o Vercel, ¡no olvides poner el enlace aquí!)**
+🚀 **[Ver Film-Search Online](https://prismatic-caramel-dbae89.netlify.app)**
 
 ---
 
@@ -36,7 +36,7 @@ Este proyecto está construido con **Vue 2 (Options API)** y utiliza las siguien
 *   **Gestión de Estado**: [Vuex 3](https://v3.vuex.vuejs.org/) para un manejo de estado centralizado y predecible, especialmente para los favoritos y el tema de la UI.
 *   **Routing**: [Vue Router 3](https://v3.router.vuejs.org/) para la navegación entre las diferentes vistas de la aplicación.
 *   **Cliente HTTP**: [Axios](https://axios-http.com/) para realizar peticiones a la API de TMDb.
-*   **Estilos**: **SCSS** con la metodología `scoped styles` para mantener los estilos de los componentes encapsulados.
+*   **Estilos**: **CSS** con la metodología `scoped styles` para mantener los estilos de los componentes encapsulados.
 *   **Persistencia de Datos**: Uso de `localStorage` para guardar los favoritos del usuario entre sesiones.
 *   **Consumo de API REST**: Integración con la API de [The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api) como fuente de datos.
 
@@ -46,7 +46,7 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
 **1. Clona el repositorio**
 ```bash
-git clone https://github.com/tu-usuario/film-search.git
+git clone https://github.com/joseagarsol/film-search.git
 cd film-search
 ```
 
@@ -72,8 +72,3 @@ npm install
 npm run serve
 ```
 La aplicación estará disponible en `http://localhost:8080`.
-
-
-## 📸 Screenshots
-
-*(Aquí puedes añadir capturas de pantalla de tu aplicación. Por ejemplo: de la página principal, de la búsqueda, de los detalles de una película y de la sección de favoritos).*
